@@ -16,7 +16,7 @@ import java.math.BigDecimal;   // BigDecimal lives in java.math, so it needs an 
  * The cost is money, so it is a BigDecimal and not a double: a BigDecimal
  * stores the decimal digits exactly.
  */
-public class Asset {
+public abstract class Asset {
     // Backing variables: private, the child classes use the getters
     private String description;
     private String dateAcquired;
@@ -54,7 +54,5 @@ public class Asset {
 
     // The general answer for any asset: it is worth what was paid for it.
     // A child class that knows better replaces this method with its own
-    public BigDecimal getValue() {
-        return originalCost;
-    }
+    public abstract BigDecimal getValue();
 }
