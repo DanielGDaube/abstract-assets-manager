@@ -22,6 +22,8 @@ public abstract class Asset {
     private String dateAcquired;
     private BigDecimal originalCost;
 
+    public Asset(){}
+
     public Asset(String description, String dateAcquired, BigDecimal originalCost) {
         this.description = description;
         this.dateAcquired = dateAcquired;
